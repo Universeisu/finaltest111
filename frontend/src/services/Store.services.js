@@ -4,14 +4,8 @@ const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const STORE_API = `${BASE_URL}${import.meta.env.VITE_STORE_API}`;
 
 // Create a new store
-const createStore = async (storeData) => {
-  try {
-    const response = await api.post(STORE_API, storeData);
-    return response;
-  } catch (error) {
-    console.error("Failed to create store:", error);
-    throw error;
-  }
+const createStore = async (storeName,adminId,address,latitude,longitude,deliveryRadius) => {
+ return await api.post(`${STORE_API}/`,{storeName,adminId,address,latitude,longitude,deliveryRadius})
 };
 
 // Get all stores
