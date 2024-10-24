@@ -84,7 +84,7 @@ function Add() {
           deliveryRadius: "",
         });
         // Redirect to home or refresh stores
-        navigate("/home"); 
+        navigate("/"); 
       }
     } catch (error) {
       console.error("Error adding Store:", error);
