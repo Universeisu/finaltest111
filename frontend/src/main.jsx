@@ -4,6 +4,7 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom';
 import { AuthProvider } from "./contexts/StoreContext.jsx";
 import router from './Routers/Router.jsx';
+import StoreService from "./services/Store.services.js";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
